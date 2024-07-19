@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Project</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Form Container -->
+  <div class="w-75 mx-auto py-5 px-3 rounded-3 shadow-lg mt-5">
+    <h1>CRUD Project</h1>
+
+    <!-- Product Form -->
+    <form id="product-form">
+      <div class="mb-3">
+        <label for="product_name" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="product_name" placeholder="Enter product name" />
+      </div>
+      <div class="mb-3">
+        <label for="product_category" class="form-label">Product Category</label>
+        <input type="text" class="form-control" id="product_category" placeholder="Enter product category" />
+      </div>
+      <div class="mb-3">
+        <label for="product_price" class="form-label">Product Price</label>
+        <input type="text" class="form-control" id="product_price" placeholder="Enter product price" />
+      </div>
+      <div class="mb-3">
+        <label for="product_desc" class="form-label">Product Description</label>
+        <textarea class="form-control" id="product_desc" rows="3"></textarea>
+      </div>
+
+      <button id="create-btn" class="btn btn-primary">Add Product</button>
+      <button id="clear-btn" class="btn btn-primary" type="button">Clear</button>
+    </form>
+  </div>
+
+  <!-- Product Search -->
+  <div class="my-5 w-75 mx-auto">
+    <input type="text" class="form-control" id="query" placeholder="Search by product name.." />
+  </div>
+
+  <!-- Products Table -->
+  <div id="product-table-container" class="w-75 mx-auto my-5 d-none">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <!-- Warning Message -->
+  <div id="warning-msg" class="w-75 mx-auto my-5 d-none">
+    <div class="alert alert-warning" role="alert">
+      A simple warning alert—check it out!
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
